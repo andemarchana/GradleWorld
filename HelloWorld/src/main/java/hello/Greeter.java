@@ -1,55 +1,45 @@
 package hello;
 
-
-
 public class Greeter {
 
+	private String name = "";
 
+	public String getName()
 
-  private String name = "";
+	{
 
+		return name;
 
+	}
 
-  public String getName() 
+	public void setName(String name)
 
-  {
+	{
 
-    return name;
+		this.name = name;
 
-  }
+	}
 
+	public String sayHello()
 
+	{
 
-  public void setName(String name) 
+		if (name == "")
 
-  {
+		{
 
-      this.name = name;
+			return "Hello!";
 
-  }
+		}
 
+		else
 
+		{
 
-  public String sayHello() 
+			return "Hello " + name + "!";
 
-  {
+		}
 
-  	if (name == "") 
-
-    {
-
-       return "Hello!";
-
-    }
-
-    else 
-
-    {
-
-       return "Hello " + name + "!";
-
-    }
-
-  }
+	}
 
 }
