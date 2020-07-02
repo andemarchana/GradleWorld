@@ -28,7 +28,7 @@ public class Greeter {
 
 		{
 
-			return "Hello!";
+			return "Hello! ";
 
 		}
 
@@ -37,6 +37,28 @@ public class Greeter {
 		{
 
 			return "Hello " + name + "!";
+
+		}
+
+	}
+	
+	public String sayHelloQALeads()
+
+	{
+
+		if (name == "")
+
+		{
+
+			return "Hello! To QA Leads";
+
+		}
+
+		else
+
+		{
+
+			return "Hello To QA Leads " + name + "!";
 
 		}
 
