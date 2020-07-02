@@ -1,4 +1,4 @@
-
+println 'This is executed during the initialization phase.'
 rootProject.name = 'HelloWorld'
 
 /*
@@ -15,4 +15,6 @@ project(':api').projectDir = new File('../api')
 
 include ':impl'
 project(':impl').projectDir = new File('../impl') */
+
+
 

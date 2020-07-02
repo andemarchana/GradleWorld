@@ -84,8 +84,31 @@ task task4(dependsOn: [task1, task3]) doLast { println 'building the distributio
 
 class GreetingPlugin implements Plugin<Project> {
    void apply(Project project) {
-      project.task('greeting') << {
+      project.task('greeting') doLast {
          println "Hello from the GreetingPlugin"
       }
    }
+}
+
+
+////////////////Life Cycle///////////////////////
+
+task configurePhase {
+	println 'This is also executed during the configuration phase.'
+}
+
+task executionPhaseTask {
+	doLast {
+		println 'This is executed during the execution phase.'
+	}
+}
+
+task BothPhases {
+	doFirst {
+	  println 'This is executed first during the execution phase.'
+	}
+	doLast {
+	  println 'This is executed last during the execution phase.'
+	}
+	println 'This is executed during the configuration phase as well.'
 }
